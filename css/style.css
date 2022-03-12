@@ -1,0 +1,224 @@
+:root {
+	--main-color: black;
+	--secondary-color: white;
+}
+
+body {
+	font-family: Segoe UI;
+}
+
+.dark {
+	background-color: var(--main-color);
+}
+
+header {
+	background-color: var(--main-color);
+	position: relative;
+}
+
+header .container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px 0;
+}
+
+header h1 {
+	color: var(--secondary-color);
+}
+
+header .search-box input {
+	width: 400px;
+	padding: 10px 20px;
+	border-radius: 5px;
+	border: none;
+	outline: none;
+}
+
+header .search-box button {
+	background-color: var(--secondary-color);
+	padding: 10px 20px;
+	border-radius: 5px;
+	font-weight: bold;
+	color: var(--main-color);
+	border: none;
+	outline: none;
+}
+
+header .theme {
+	background-color: var(--secondary-color);
+	padding: 10px 20px;
+	border-radius: 5px;
+	font-weight: bold;
+	color: var(--main-color);
+	border: none;
+	outline: none;
+}
+
+.dark-header {
+	background-color: var(--secondary-color);
+}
+
+.dark-header h1 {
+	color: var(--main-color);
+}
+
+.dark-header .search-box input {
+	width: 400px;
+	padding: 10px 20px;
+	border: none;
+	background-color: var(--main-color);
+	color: var(--secondary-color);
+	border-radius: 5px;
+}
+
+.dark-header .search-box button {
+	background-color: var(--main-color);
+	color: var(--secondary-color);
+}
+
+.dark-header .theme {
+	background-color: var(--main-color);
+	color: var(--secondary-color);
+}
+
+header .loading {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border-right: var(--main-color);
+	border-left: transparent;
+	border-top: transparent;
+	border-bottom: transparent;
+	border-style: solid;
+	border-width: 5px;
+	animation: loading 1s linear infinite;
+	display: none;
+}
+
+.dark-header .loading {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border-right: var(--secondary-color);
+	border-left: transparent;
+	border-top: transparent;
+	border-bottom: transparent;
+	border-style: solid;
+	border-width: 5px;
+	animation: loading 1s linear infinite;
+	display: none;
+}
+
+@keyframes loading {
+	from {
+		transform: translateX(-50%) rotate(0);
+	}
+	to {
+		transform: translateX(-50%) rotate(360deg);
+	}
+}
+
+@media (max-width: 767px) {
+	header .container {
+		padding: 20px;
+	}
+
+	header h1 {
+		display: none;
+	}
+
+	header .search-box input {
+		width: 300px;
+	}
+
+	.dark-header .search-box input {
+		width: 300px;
+	}
+}
+
+@media (max-width: 992px) {
+	header .search-box input {
+		width: 200px;
+	}
+
+	.dark-header .search-box input {
+		width: 200px;
+	}
+}
+
+main {
+	padding: 50px 0;
+}
+
+main section {
+	display: flex;
+	justify-content: center;
+}
+
+main section .results {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+	justify-content: center;
+}
+
+main section .results .result {
+	border-radius: 10px;
+	overflow: hidden;
+	width: 250px;
+	position: relative;
+}
+
+@media (max-width: 767px) {
+	main section .results .result {
+		width: 300px;
+	}
+}
+
+main section .results .result:hover h1 {
+	transform: translateY(0);
+}
+
+main section .results .result img {
+	width: 100%;
+	height: 100%;
+}
+
+main section .results .result .title {
+	position: absolute;
+	bottom: 0;
+	color: var(--secondary-color);
+	background-color: rgb(0, 0, 0, 70%);
+	width: 100%;
+	padding: 10px;
+	font-size: 16px;
+	text-align: center;
+	transform: translateY(100%);
+	transition: 0.3s;
+}
+
+main section .results .result .score {
+	position: absolute;
+	top: 0;
+	color: var(--secondary-color);
+	background-color: rgb(0, 0, 0, 70%);
+	width: 100%;
+	padding: 10px;
+	font-size: 16px;
+	text-align: center;
+	transform: translateY(-100%);
+	transition: 0.3s;
+}
+
+.dark main section .results .result .title,
+.dark main section .results .result .score {
+	color: var(--main-color);
+	background-color: rgb(255, 255, 255, 70%);
+}

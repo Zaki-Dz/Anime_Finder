@@ -1,0 +1,59 @@
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+}
+
+button {
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.container {
+	margin: auto;
+}
+
+@media (max-width: 767px) {
+	/* Mobile & Tablet */
+	.container {
+		padding: 0 10px;
+	}
+}
+
+@media (min-width: 768px) {
+	/* Small screens */
+	.container {
+		width: 738px;
+	}
+}
+
+@media (min-width: 992px) {
+	/* Medium screens */
+	.container {
+		width: 962px;
+	}
+}
+
+@media (min-width: 1200px) {
+	/* Large screens */
+	.container {
+		width: 1170px;
+	}
+}
