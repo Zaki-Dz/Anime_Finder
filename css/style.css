@@ -5,6 +5,7 @@
 
 body {
 	font-family: Segoe UI;
+	padding-top: 120px;
 }
 
 .dark {
@@ -13,7 +14,10 @@ body {
 
 header {
 	background-color: var(--main-color);
-	position: relative;
+	position: fixed;
+	top: 0;
+	z-index: 2;
+	width: 100%;
 }
 
 header .container {
@@ -132,6 +136,12 @@ header .loading {
 
 	header h1 {
 		display: none;
+	}
+
+	header .search-box {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
 	}
 
 	header .search-box input {
